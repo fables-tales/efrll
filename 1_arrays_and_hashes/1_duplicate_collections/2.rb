@@ -11,3 +11,7 @@ class HashSelector
 
   attr_reader :hash
 end
+
+a = HashSelector.new({:invalid => :value, :valid => :another_value})
+
+p a.meaningful_keys

@@ -13,6 +13,11 @@ class ValidatesConstructorArguments
   attr_reader :potentially_invalid_array
 
   def array_valid?
-    potentially_invalid_array.all? { |x| String === x}
+    potentially_invalid_array.all? { |x| String === x }
   end
 end
+
+array = ["string", "string", "string"]
+vca = ValidatesConstructorArguments.new(array)
+array << 1
+p vca.transform

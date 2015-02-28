@@ -1,7 +1,7 @@
-some_words = "I like turtles? Do you like turtles?"
+some_words = "Single page web apps don't work on the web"
 
 result = {}
-some_words.split(" ").each do |word|
+some_word.split(" ").each do |word|
   result[word] ||= 0
   result[word] += 1
 end

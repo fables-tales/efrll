@@ -10,7 +10,7 @@ class RandomMatrix
   end
 
   def row(i)
-    matrix.dup[i].dup
+    matrix[i]
   end
 
   private
@@ -20,7 +20,4 @@ end
 
 m = RandomMatrix.new(3,4)
 m.row(1)[0] = 9999999999
-p m.row(1)
-p m.row(1)
-p m.row(1)
 p m.row(1)

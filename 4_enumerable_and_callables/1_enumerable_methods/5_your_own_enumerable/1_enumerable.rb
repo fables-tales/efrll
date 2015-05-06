@@ -23,8 +23,10 @@ class DynamicCollection
   include Enumerable
 
   def each(&blk)
-    while rand < 0.9
+    10.times do
       blk.call(rand)
+      #could be file io, network, etc
+      sleep(rand*0.1)
     end
   end
 end

@@ -9,8 +9,8 @@ Benchmark.bigo do |x|
       :set   => Set.new(array),
     }
   }
-  x.steps = 12
-  x.step_size = 200
+  x.steps = 10
+  x.step_size = 20
   x.min_size = 1
   x.report("Array#include?") { |data, size| data.fetch(:array).include?(rand(size)) }
   x.report("Set#include?")    { |data, size| data.fetch(:set).include?(rand(size)) }

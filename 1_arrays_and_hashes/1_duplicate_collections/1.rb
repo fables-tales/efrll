@@ -1,6 +1,6 @@
 class ValidatesConstructorArguments
   def initialize(potentially_invalid_array)
-    @potentially_invalid_array = potentially_invalid_array
+    @potentially_invalid_array = potentially_invalid_array.dup
     raise ArgumentError.new("The passed array is invalid") unless array_valid?
   end
 

@@ -12,4 +12,5 @@ end
 p Foo.b
 p Foo.b
 p Foo.b
+
 p Foo.new.b

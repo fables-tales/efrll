@@ -11,9 +11,9 @@ class Foo
   end
 end
 
-f = Foo.new
+f1 = Foo.new
 f2 = Foo.new
 
-p f.bar
-
+p f1.bar
 p f2.bar
+

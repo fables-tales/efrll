@@ -4,7 +4,7 @@ describe "A test with multiple expectations" do
   let(:some_json_structure) {
     {
       "location" => {
-        "latitude" => 54.1,
+        "latitude" => "bees",
         "longitude" => 1,
       },
       "name" => "Single page web apps don't work"
@@ -26,7 +26,7 @@ describe "A test with multiple expectations" do
       expect(some_json_structure.fetch("location").fetch("longitude")).to be_an_instance_of(Fixnum)
     end
 
-    it "has a name of 'single page web apps don't work'" do
+    it "has a name of 'single page web apps don't work" do
       expect(some_json_structure.fetch("name")).to eq("Single page web apps don't work")
     end
   end
@@ -35,8 +35,8 @@ describe "A test with multiple expectations" do
     it "matches" do
       expect(some_json_structure).to match(
         "location" => {
-          "latitude" => 37,
-          "longitude" => be_an_instance_of(Fixnum),
+          "latitude" => 54.1,
+          "longitude" => be_an_instance_of(Fixnum)
         },
         "name" => /.*/
       )

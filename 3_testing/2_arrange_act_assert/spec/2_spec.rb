@@ -1,4 +1,5 @@
 require "spec_helper"
+require "securerandom"
 
 class Collaborates
   def initialize(random)

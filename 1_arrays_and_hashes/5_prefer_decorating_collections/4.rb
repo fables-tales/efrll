@@ -1,9 +1,9 @@
 require "forwardable"
 
-require('forwardable')
 class RaisingHash
-  extend(Forwardable)
-  include(Enumerable)
+  extend Forwardable
+  include Enumerable
+
   def initialize(hash)
     @hash = hash
   end
@@ -17,6 +17,5 @@ r = RaisingHash.new(:a => :b)
 
 r[:a]
 r[:b]
-
 
 p r.respond_to?(:include)

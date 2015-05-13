@@ -1,6 +1,6 @@
 class HashSelector
   def initialize(hash)
-    @hash = hash
+    @hash = hash.dup
   end
 
   def meaningful_keys
@@ -12,6 +12,8 @@ class HashSelector
   attr_reader :hash
 end
 
-a = HashSelector.new({:invalid => :value, :valid => :another_value})
+hash = {:invalid => :value, :valid => :another_value}
+a = HashSelector.new(hash)
 
 p a.meaningful_keys
+p hash

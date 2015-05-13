@@ -5,8 +5,6 @@ l = lambda { |arg_one, arg_two|
 
 l.call(1,2)
 
-#Thanks to @jcoglan for the example
-
 def foo(&blk)
   p [:foo, 1]
   blk.call

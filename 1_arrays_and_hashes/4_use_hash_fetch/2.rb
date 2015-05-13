@@ -10,15 +10,8 @@ class IsLikeAHash
   end
 end
 
-p IsLikeAHash.new.fetch(1)
-
 a = [1,2,3,4,5]
-p a[1]
-p a[18]
 
-a.extend(Fetchable)
+p a[2]
 
-p a.fetch(18)
-a << nil
-p a[5]
-p a.fetch(5)
+p a.fetch(100, 9)

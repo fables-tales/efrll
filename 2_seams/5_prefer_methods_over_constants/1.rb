@@ -2,7 +2,7 @@ class Sample
   FOOS = [1,2,3]
 
   def does_something_with_foos
-    FOOS.select!{|x| x % 2 == 0}
+    foos.select!{|x| x % 2 == 0}
   end
 
   def foos
@@ -11,6 +11,6 @@ class Sample
 end
 
 c = Sample.new
+p Sample::FOOS
 p c.does_something_with_foos
-
-p Sample.new.foos
+p c.foos

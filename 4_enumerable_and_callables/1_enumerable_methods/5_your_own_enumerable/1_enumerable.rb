@@ -1,23 +1,22 @@
-class StaticCollection
-  include Enumerable
-
-  def each(&blk)
-    blk.call(1)
-    blk.call(2)
-    blk.call(3)
-  end
-end
-
-StaticCollection.new.each do |item|
-  p item
-end
-
-
-p "----------"
-p StaticCollection.new.reduce(:+)
-p StaticCollection.new.select { |x| x.even? }
-
-p "----------"
+#class StaticCollection
+#  include Enumerable
+#
+#  def each(&blk)
+#    blk.call(1)
+#    blk.call(2)
+#    blk.call(3)
+#  end
+#end
+#
+#StaticCollection.new.each do |item|
+#  p item
+#end
+#
+#
+#p "----------"
+#p StaticCollection.new.select {|x| x.even? }
+#p StaticCollection.new.reduce(:+)
+#p "----------"
 
 class DynamicCollection
   include Enumerable

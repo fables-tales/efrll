@@ -3,9 +3,7 @@ p = Proc.new { |arg_one, arg_two|
   p arg_two
 }
 
-p.call(1,2,3)
-
-#Thanks to @jcoglan for the example
+p.call(1,2)
 
 def foo(&blk)
   p [:foo, 1]

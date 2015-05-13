@@ -6,7 +6,7 @@ class ArrayLike < SimpleDelegator
   end
 end
 
-a = ArrayLike.new([1,2,3])
+a = ArrayLike.new([2])
 
 p a
 
@@ -14,8 +14,6 @@ a.each do |item|
   p item
 end
 
-p a.reverse
+p a.reverse.class
 
 p a.contains_only_even_numbers?
-
-

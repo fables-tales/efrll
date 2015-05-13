@@ -14,7 +14,7 @@ class Factory
   end
 end
 
-f =  Factory.new
+f = Factory.new
 p f.make
 p f.make
 p f.make

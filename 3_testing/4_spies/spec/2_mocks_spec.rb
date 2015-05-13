@@ -30,9 +30,9 @@ RSpec.describe Tested do
 
   describe "#foo" do
     context "When the random value is high" do
-      it "returns high" do
+      it "calls the complex method on the collaborator" do
         expect(tested.collaborator).to receive(:complex_method).and_return(1)
-        expect(tested.foo).to eq("high")
+        tested.foo
       end
     end
   end

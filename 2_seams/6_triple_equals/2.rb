@@ -1,6 +1,6 @@
 class EmailMatcher
   def ===(other)
-    other.split("@").count === 2 &&
+    other.split("@").count == 2 &&
       other.split("@").last.include?(".")
   end
 end
@@ -22,4 +22,4 @@ class ValidatesEmails
   end
 end
 
-p ValidatesEmails.new("bob@example.co").valid?
+p ValidatesEmails.new("bob@example.com").valid?

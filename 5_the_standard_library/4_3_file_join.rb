@@ -1,7 +1,10 @@
 path_fragments = ["/tmp", "#{rand}", "hello.txt"]
 
 filename = File.join(path_fragments)
+p filename
 directory = File.dirname(filename)
+
+p directory
 
 Dir.mkdir(directory)
 

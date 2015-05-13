@@ -12,5 +12,5 @@ class Foo < Bar
   end
 end
 
-p Bar.new.a
 p Foo.new.a
+p Bar.new.a

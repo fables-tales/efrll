@@ -21,8 +21,9 @@ RSpec.describe Tested do
 
   describe "#foo" do
     context "When the random value is high" do
-      it "returns high" do
-        expect(tested.foo).to eq("high")
+      it "calls the complex method on the collaborator" do
+        tested.foo
+
         expect(collaborator).to have_received(:complex_method).with(no_args)
       end
     end

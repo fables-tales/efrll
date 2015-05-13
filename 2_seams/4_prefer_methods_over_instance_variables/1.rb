@@ -10,7 +10,6 @@ class ValidatesArrays
   private
 
   def array
-    #specifying default value
     @array || []
   end
 end
